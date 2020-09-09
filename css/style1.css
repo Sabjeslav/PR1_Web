@@ -1,0 +1,199 @@
+@font-face {
+    font-family: "Gothic-No1";
+    src: url("../fonts/Gothic-No1.otf") format("opentype");
+}
+
+*, *:after, *:before{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+}
+
+html{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100vw;
+    height: 14vh;
+    font-family: "Gothic-No1";
+    letter-spacing: 5px;
+    text-align: center;
+    font-size: 75px;
+    font-weight: 400;
+    background-color: rgba(0,0,0,0.5);
+    padding: 1%;
+    display: flex;
+}
+
+header > span{
+    display: flex;
+    margin: auto;
+    color: white;
+}
+
+#bodya{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s ease-in-out;
+    background-image: url("../background-images/road.jpg");
+    background-position: center;
+}
+
+main{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 5vh;
+    width: 80vw;
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    user-select: none;
+}
+
+#left{
+    position: absolute;
+    width: 25vw;
+    height: 70vh;
+    /*border: 1px solid white; */
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.15);
+    box-shadow: none;
+    border: 5px solid white;
+}
+
+#left p , #center p{
+    text-align: center;
+    font-family: "Gothic-No1";
+    font-size: 100px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 40%;
+    transition: 0.4s;
+    outline: none;
+    border: none;
+    text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 0, rgba(0, 0, 0, 0.5)  -1px -1px 0,
+    rgba(0, 0, 0, 0.5)  -1px 1px 0, rgba(0, 0, 0, 0.5)  5px -1px 0;
+}
+
+
+#left:hover, #right:hover, #center:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    outline: solid rgba(0, 0, 0, 0.77) 7px;
+    box-shadow: inset 0 0 0 8px rgba(0, 0, 0, 0.5);
+    border: none;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+#left:hover p, #right:hover p, #center:hover p {
+    margin-top: 5%;
+    transition: 0.4s;
+    text-shadow: 0 5px 3px black;
+}
+
+#center{
+    position: absolute;
+    width: 25vw;
+    height: 70vh;
+    left: calc(25vw + 2.5vw);
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.15);
+    box-shadow: none;
+    border: 5px solid white;
+}
+
+#right{
+    position: absolute;
+    width: 25vw;
+    height: 70vh;
+    right: 0;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.15);
+    box-shadow: none;
+    border: 5px solid white;
+}
+
+#right p{
+    text-align: center;
+    font-family: "Gothic-No1";
+    font-size: 100px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-top: 50%;
+    transition: 0.4s;
+    text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 0, rgba(0, 0, 0, 0.5)  -1px -1px 0,
+    rgba(0, 0, 0, 0.5)  -1px 1px 0, rgba(0, 0, 0, 0.5)  5px -1px 0;
+}
+
+main button{
+    display: flex;
+    width: 40%;
+    height: 10%;
+    border-radius: 15px;
+    background-color: black;
+    border: 5px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transition: 0.5s;
+    color: white;
+    outline: none;
+
+}
+
+main button:hover{
+    border: 3px solid white;
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+main button a{
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main span{
+    display: flex;
+    font-family: "Trebuchet MS";
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+    padding: 20px;
+}
+
+#left:hover button ,#right:hover button, #center:hover button{
+    opacity: 1;
+    transition: 1s;
+    cursor: pointer;
+}
+
+#left:hover span ,#right:hover span, #center:hover span{
+    opacity: 1;
+    transition: 1s;
+}
